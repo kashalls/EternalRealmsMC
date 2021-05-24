@@ -50,8 +50,8 @@ class EternalRealmsMCClient {
 		return this._get('servers');
 	}
 
-	_get(endpoint) {
-		return fetch(`${this.baseURL}${endpoint}`)
+	async _get(endpoint) {
+		return await fetch(`${this.baseURL}${endpoint}`)
 			.then(res => res.json());
 	}
 
