@@ -57,3 +57,5 @@ class EternalRealmsMCClient {
             .then(json)
     }
 }
+
+module.exports = EternalRealmsMCClient
