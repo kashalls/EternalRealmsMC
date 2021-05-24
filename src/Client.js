@@ -1,61 +1,60 @@
 const fetch = require('node-fetch');
 
 /**
- * Client for Eternal Realms MC 
+ * Client for Eternal Realms MC
  * https://eternalrealms.net
  */
 
 class EternalRealmsMCClient {
 
-    /**
+	/**
      * @typedef {Object} EternalRealmsMCClientOptions
      * @param {String} [url] Base URL for Eternal Realms Client
      * @memberof EternalRealmsMCClient
      */
 
-    /**
+	/**
      * @param {EternalRealmsMCClientOptions} [options] Client Options
      */
-    constructor(options = {}) {
-
-        /**
+	constructor(options = {}) {
+		/**
          * Client Options
          * @type {Object}
          */
-        this.options = options;
+		this.options = options;
 
-        /**
-        * Base URL 
+		/**
+        * Base URL
         * @type {String}
         */
-        this.baseURL = options.url || "https://api.eternal.gs/"
-    }
+		this.baseURL = options.url || 'https://api.eternal.gs/';
+	}
 
-    online(server) {
-        return this._get(`online${server ? `/${server}` : ''}`)
-    }
+	online(server) {
+		return this._get(`online${server ? `/${server}` : ''}`);
+	}
 
-    user(user) {
-        return this._get(`user${user ? `/${user}` : ''}`)
-    }
+	user(user) {
+		return this._get(`user${user ? `/${user}` : ''}`);
+	}
 
-    staff() {
-        return this._get(`online/staff`)
-    }
+	staff() {
+		return this._get(`online/staff`);
+	}
 
-    stats() {
-        return this._get('stats')
-    }
+	stats() {
+		return this._get('stats');
+	}
 
-    servers() {
-        return this._get('servers')
-    }
+	servers() {
+		return this._get('servers');
+	}
 
-    _get(endpoint) {
-        const request = fetch(`${this.baseURL}${endpoint}`)
-            .then(res => res.json())
-            .then(json)
-    }
+	_get(endpoint) {
+		return fetch(`${this.baseURL}${endpoint}`)
+			.then(res => res.json());
+	}
+
 }
 
-module.exports = EternalRealmsMCClient
+module.exports = EternalRealmsMCClient;
