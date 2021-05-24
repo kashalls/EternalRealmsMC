@@ -12,9 +12,9 @@ Example:
 
 ```javascript
 const EternalRealmsClient = require('eternalrealmsmc');
-const Client = new EternalRealmsClient.Client();
+const Client = new EternalRealmsClient();
 
-Client.online()
+console.log(await Client.online())
 ```
 
 Result:
