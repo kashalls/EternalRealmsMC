@@ -1,6 +1,6 @@
 {
   "name": "eternalrealmsmc",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "src/index.js",
   "repository": "https://github.com/Kashalls/EternalRealmsMC.git",
   "author": "Jordan Jones <jordpjones@gmail.com>",

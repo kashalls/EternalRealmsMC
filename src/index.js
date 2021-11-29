@@ -30,6 +30,12 @@ class EternalRealmsMCClient {
 		this.baseURL = options.url || 'https://api.eternal.gs/';
 	}
 
+	/**
+	 * Fetch the list of players online from all or a specific server.
+	 * @param {('dev'|'lobby'|'stage'|'kitpvp'|'survival'|null)} server The server name of the
+	 * @returns {Promise<Object>}
+	 */
+
 	online(server) {
 		return this._get(`online${server ? `/${server}` : ''}`);
 	}
